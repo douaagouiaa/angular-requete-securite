@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS JS</title>
+
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body >
+    
+            <section class="sidebar">
+                <div class="top">
+                    <div class="logo">
+                    <i class='bx bx-home-alt-2' ></i>
+                    <span><p style="font-weight: bold;">Menu</p></span>
+                    </div>
+                    <i class="bx bx-menu" id="btn" (click)="toggleSidebar()"></i>
+
+
+                    <div class="user">
+                    <img src={{loggedUrl}} class="user-img">
+                    <div><p class="bold">{{loggedInUsername}}</p>
+                        <p>{{loggedInRole}}</p></div>    
+                </div>
+
+                
+                    <div>
+                    <ul>
+                        <li >
+                        <a href="#">
+                            <i class="bx bxs-grid-alt"></i>
+                            <span>chantiers</span>
+                        </a>
+                        <span class="tooltip">chantiers</span>
+                        </li>
+                        <li >
+                        <a href="#">
+                        <i class='bx bxs-user' onclick="redirectToLogin()"></i>
+                            <span>Profile</span>
+                        </a>
+                        <span class="tooltip">profile</span>
+                        </li>
+                        <li >
+                        <a href="#">
+                            <i class="bx bxs-log-out"></i>
+                            <span>deconnexion</span>
+                        </a>
+                        <span class="tooltip">deconnexion</span>
+                        </li>
+                    </ul>
+                    </div> </div> </section>
+                 
+                    <header>
+                       <nav class="navbar">
+                        
+                            
+                          </nav>
+                       </header>   
+                <div class="main-content">
+  
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()">                 
+     <div class="form-container">
+    <div class="form-title">Formulaire d'évaluation pour le  : {{chantierId}}</div>
+    <div class="form-card">
+      <h3>Combien d'accidents de travail le moins dernier ?</h3>
+      <div class="question-options">
+        <input type="radio" id="option1" formControlName="question1" value="0" required>
+        <label for="option1">0 </label>
+        <br>
+        <input type="radio" id="option2" formControlName="question1" value="1">
+        <label for="option2">1</label>
+        <br>
+        <input type="radio" id="option3" formControlName="question1" value="2">
+        <label for="option3">2</label>
+        <br>
+        <input type="radio" id="option3" formControlName="question1" value="3">
+        <label for="option3">3</label>
+        <br>
+        <input type="radio" id="option3" formControlName="question1" value="4">
+        <label for="option3">4</label>
+        <br>
+        <input type="radio" id="option3" formControlName="question1" value="5">
+        <label for="option3">5</label>
+      </div>
+    </div>
+
+    <div class="form-card">
+        <h3>Combien d'equipements de sécurités sont opposés obligatoirement sur les travailleurs?</h3>
+        <div class="question-options">
+          <input type="radio" id="option1" formControlName="question2" value="1">
+          <label for="option1">1 </label>
+          <br>
+          <input type="radio" id="option2" formControlName="question2" value="2">
+          <label for="option2">2</label>
+          <br>
+          <input type="radio" id="option3" formControlName="question2" value="3">
+          <label for="option3">3</label>
+          <br>
+          <input type="radio" id="option4" formControlName="question2" value="4">
+          <label for="option3">4</label>
+          <br>
+          <input type="radio" id="option5" formControlName="question2" value="5">
+          <label for="option3">5</label>
+          <br>
+          <input type="radio" id="option6" formControlName="question2" value="6">
+          <label for="option3">6</label>
+
+        </div>
+      
+  
+      </div>
+    
+    <div class="form-card">
+      <h3>Combien de travailleurs portent correctement des casques de sécurité anti-heurt ou de protection du visage  ?</h3>
+      <textarea class="free-input" formControlName="question3" rows="1"></textarea>
+      <div *ngIf="myForm.get('question3')?.invalid && (myForm.get('question3')?.dirty || myForm.get('question3')?.touched)" class="error-message">
+        <p>Entrée invalide.</p></div>
+    </div>
+    <div class="form-card">
+        <h3>Combien les bouchons d'oreilles?</h3>
+        <textarea class="free-input" formControlName="question4" rows="1"></textarea>
+        <div *ngIf="myForm.get('question4')?.invalid && (myForm.get('question4')?.dirty || myForm.get('question4')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Combien de travailleurs portent correctement les casques anti-bruits?</h3>
+        <textarea class="free-input" formControlName="question5" rows="1" required></textarea>
+        <div *ngIf="myForm.get('question5')?.invalid && (myForm.get('question5')?.dirty || myForm.get('question5')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Combien de travailleurs portent correctement es masques de protection anti-poussière, à ventilation ou avec filtre?</h3>
+        <textarea class="free-input" formControlName="question6" rows="1"></textarea>
+        <div *ngIf="myForm.get('question5')?.invalid && (myForm.get('question5')?.dirty || myForm.get('question6')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Combien de travailleurs portent correctement les gants</h3>
+        <textarea class="free-input" formControlName="question7" rows="1"></textarea>
+        <div *ngIf="myForm.get('question7')?.invalid && (myForm.get('question7')?.dirty || myForm.get('question7')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Combien de travailleurs portent correctement les EPI de protection contre les chutes de hauteur?</h3>
+        <textarea class="free-input" formControlName="question8" rows="1"></textarea>
+        <div *ngIf="myForm.get('question8')?.invalid && (myForm.get('question8')?.dirty || myForm.get('question8')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Quelle est le nombre de travailleurs actifs dans ce chantier?</h3>
+        <textarea class="free-input" formControlName="question9" rows="1" required  ></textarea>
+        <div *ngIf="myForm.get('question9')?.invalid && (myForm.get('question9')?.dirty || myForm.get('question9')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Quelles est la durée éstimée du chantier?</h3>
+        <textarea class="free-input" formControlName="question10" rows="1" required  ></textarea>
+        <div *ngIf="myForm.get('question10')?.invalid && (myForm.get('question10')?.dirty || myForm.get('question9')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Quel est le progres du chantier?</h3>
+        <textarea class="free-input" formControlName="question11" rows="1" required  ></textarea>
+        <div *ngIf="myForm.get('question11')?.invalid && (myForm.get('question11')?.dirty || myForm.get('question9')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+    
+      <div class="form-card">
+        <h3>Le nombre de materiaux exploités dans le chantier?</h3>
+        <textarea class="free-input" formControlName="question12" rows="1" required  ></textarea>
+        <div *ngIf="myForm.get('question12')?.invalid && (myForm.get('question12')?.dirty || myForm.get('question12')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+      <div class="form-card">
+        <h3>Nombres de materiaux marqués non sùres ?</h3>
+        <textarea class="free-input" formControlName="question13" rows="1" required  ></textarea>
+        <div *ngIf="myForm.get('question13')?.invalid && (myForm.get('question13')?.dirty || myForm.get('question13')?.touched)" class="error-message">
+            <p>Entrée invalide.</p></div>
+      </div>
+    
+    <button type="submit" class="submit-button">Valider</button>
+
+  </div> </form>
+  <div *ngIf="isModalVisible" class="modal">
+    <div class="modal-content">
+      <h2>Erreur</h2>
+      <p>Remplir la formulaire avant la soumission.</p>
+      <button (click)="closeModal()">OK</button>
+    </div>
+  </div> </div>  
+
+
+</body>
+</html>
+

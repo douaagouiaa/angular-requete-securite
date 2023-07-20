@@ -1,0 +1,99 @@
+{
+  "employees": [
+    {
+      "mail": "sherlock@gmail.com",
+      "password": "password1",
+      "username": "Sherlock Holmes",
+      "role": "controlleur",
+      "url": "https://i.pinimg.com/736x/29/c7/c5/29c7c5c92cc828c238cdc311f84bb189.jpg"
+    },
+    {
+      "mail": "liam456@gmail.com",
+      "password": "password2",
+      "username": "William Moriarty",
+      "role": "chef",
+      "url": "https://i.pinimg.com/originals/9b/ef/5a/9bef5a8dd02919b614702c37ae5618bf.png"
+    },
+    {
+      "mail": "sebastian@gmail.com",
+      "password": "password3",
+      "username": "Sebastian Moran",
+      "role": "chef",
+      "url": "https://i.pinimg.com/originals/e9/3b/43/e93b43e77166785a673b05626eadf3c9.jpg"
+    },
+    {
+      "mail": "albert@gmail.com",
+      "password": "password4",
+      "username": "Albert Moriarty",
+      "role": "chef",
+      "url": "https://i.pinimg.com/474x/be/ab/f2/beabf2a673d0f119da52587c33dc911e.jpg"
+    },
+    {
+      "mail": "louis@gmail.com",
+      "password": "password5",
+      "username": "Louis Moriarty",
+      "role": "controlleur",
+      "url": "https://th.bing.com/th/id/OIP.5P1UBQI5jzw1I42ectZDigHaHa?pid=ImgDet&w=512&h=512&rs=1"
+    },
+    {
+      "mail": "mycoft@gmail.com",
+      "password": "password6",
+      "username": "Mycoft Holmes",
+      "role": "chef",
+      "url": "https://i.pinimg.com/originals/f5/34/30/f53430d6064e5a5b2027c1887ede1b6d.jpg"
+     
+    },
+    {
+      "mail": "lestrade@gmail.com",
+      "password": "password7",
+      "username": "Lestrade Jefferson",
+      "role": "chef",
+      "url": "https://i.pinimg.com/originals/f5/34/30/f53430d6064e5a5b2027c1887ede1b6d.jpg"
+    }
+  ],
+  "chantiers": [
+    {
+      "id": "chantier ABG456",
+      "Status": "evaluation complete",
+      "Description": "Assuré par sebastian Moran localisation: Bridgestone Avenue 145",
+      "chef": "Sebastian Moran",
+      "controlleur": "Louis Moriarty"
+    },
+    {
+      "id": "chantier FDG987",
+      "Status": "evaluation en cours",
+      "Description": "Assuré par Albert Moriarty localisation: Bridgestone Avenue 145",
+      "chef": "Mycoft Holmes",
+      "controlleur": "Sherlock Holmes"
+    },
+    {
+      "id": "chantier UIO568",
+      "Status": "evaluation en cours",
+      "Description": "Assuré par Mycoft Holmes localisation: Bridgestone Avenue 145",
+      "chef": "Mycoft Holmes",
+      "controlleur": "Sherlock Holmes"
+    },
+    {
+      "id": "chantier FDG963",
+      "Status": "evaluation complete",
+      "Description": "Assuré par Albert Moriarty localisation: Bridgestone Avenue 145",
+      "chef": "Mycoft Holmes",
+      "controlleur": "Lesterade Jefferson"
+    },
+    {
+      "id": "chantier AOL456",
+      "Status": "evaluation complete",
+      "Description": "Assuré par sebastian Moran localisation: Bridgestone Avenue 145",
+      "chef": "Sebastian Moran",
+      "controlleur": "Lestrade Jefferson"
+    },
+    {
+      "id": "chantier PBG478",
+      "Status": "evaluation complete",
+      "Description": "Assuré par sebastian Moran localisation: Bridgestone Avenue 145",
+      "chef": "Sebastian Moran",
+      "controlleur": "sherlock Holmes"
+    }
+  ]
+
+}

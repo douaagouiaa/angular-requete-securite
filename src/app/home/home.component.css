@@ -1,0 +1,332 @@
+/* CSS styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdans-serif;
+  }
+  .user-img{
+      width: 50px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    margin-left: -25px;
+    
+  }
+  .sidebar{
+    position:absolute;
+    top:0;
+    left:0;
+    height:1000vh;
+    width:60px;
+    background-color:#7CBDB9;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+    
+  }
+  .sidebar.active~ .main-content{
+    left:250px;
+    width: calc(100%-250px);
+    
+  }
+  .sidebar.active .user-img{
+    margin-left: 2px;
+  }
+  .sidebar.active{
+    width:250px;
+  }
+  .sidebar #btn{
+
+    position:absolute;
+    color: #fff;
+    top: .4rem;
+    left: 25px;
+    font-size:1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  .sidebar.active #btn{
+    left:90%;
+  }
+  .sidebar .top .logo{
+   color:#fff;
+    display:flex;
+     height:50px;
+    width:100%;
+   align-items: center;
+  pointer-events:none;
+   opacity:0;
+        }
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+.top .logo i{
+    font-size:2rem;
+    margin-right:5px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.user p{
+    color: white;
+    opacity:1;
+    margin-left: 1rem;
+   
+    
+}
+
+.bold{
+    font-weight: bold;
+}
+.sidebar p{
+    opacity:0;
+}
+.sidebar.active p{
+    opacity:1;
+}
+.sidebar ul li{
+    position:relative;
+    list-style-type: none;
+    height: 50px;
+    width:90%;
+    margin: 0.8rem auto;
+    line-height:50px;
+
+}
+.sidebar ul li a{
+
+    color:white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+.sidebar ul li a:hover{
+
+    background-color: white;
+    color:black;
+}
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    margin-left: -10px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+.sidebar span {
+    opacity: 0;
+}
+.sidebar.active span {
+    opacity: 1;
+}
+.sidebar ul li .tooltip{
+
+    position: absolute;
+    left: 115px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2) ;
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    z-index: 20;
+    opacity: 0;
+    
+
+}
+.sidebar ul li:hover .tooltip{
+    opacity:1;
+background-color: rgba(255, 255, 255, 0.6);}
+
+.sidebar.active ul li .tooltip{
+   display:none;}
+
+   .main-content{
+    position: relative;
+     background: linear-gradient(to bottom, #ffffff, #DDEEEE);
+    
+    top:0;
+    left:60px;
+    transition: all 0.5s ease;
+    width: 1450px;
+    padding:1rem;
+   
+
+   }
+   .navbar {
+    background-color: #7CBDB9;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    margin-top:-15px;
+    margin-left:-40px;
+    
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 650px;
+   
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+    border: #DDEEEE;
+    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.363);}
+  
+  .search-bar button {
+    padding: 5px 10px;
+    background-color: #f1f3f562;
+    border: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  .header{
+    margin-top:-10px;
+  }
+  .main-content{
+    margin-left: -8px;
+    margin-top:  -10px;
+  }
+  
+.chantier { 
+    background-color: #e0dcdc;
+  
+   
+    padding-top: 80px;
+    padding-left: 20px;
+    min-height: 100vh;
+    max-width: 100vh;
+    border-radius: 10px ;
+    box-shadow: black 5px 5px 15px;
+   
+  }
+  
+  
+  .chantier h1 {
+    margin-top: 40px;
+    margin-left: -20px;
+    background-color: #7CBDB9;
+    justify-content: center;
+    width: 250px;
+    padding: 10px;
+  height: 30px;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  border-top-right-radius: 10px;
+  
+  /* secondary titles */
+  font-size: 30px;
+  font-family: Bakbak One;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+  }
+  
+  .product-section {
+    background-color: #b5aec26e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 3px 3px 10px;
+  }
+  
+  .product-section h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .product-section .profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  
+  .product-section p {
+    margin-bottom: 10px;
+  }
+  
+  .product-buttons {
+    position: relative;
+    display: flex;
+   
+    margin-left:600px;
+    margin-bottom: 20px;
+    
+  }
+  
+.button1:hover{
+  background-color: #558683;
+  
+}
+
+
+.button2:hover{
+  background-color: #59426e;
+}
+  .product-buttons button {
+    margin-right: 20px;
+  }
+  .button1{
+    background: #7CBDB9;
+    color: #fff;
+    border-radius: 8px;
+    border: transparent;
+    height: 30px;
+    width: 500px;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    cursor: pointer;
+    
+  }
+  .button2{
+    background:rgba(59, 55, 100, 0.47);
+    color: #fff;
+    border-radius: 8px;
+    border: transparent;
+    height: 30px;
+    width: 500px;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    cursor: pointer;
+    
+  }
+  .title .h1{
+    position: absolute;
+  }
+  /* Add more CSS styles as needed */
+  .title-section{
+    display: flex;
+    
+  }
+  .mainTitle{
+margin-top: 50px;
+margin-left: 50px;
+text-decoration: solid;
+font-size: 40px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+  }
+.i .bx-hard-hat {
+  font-size: 60px;
+}

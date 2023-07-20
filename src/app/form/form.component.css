@@ -1,0 +1,322 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #7cbdb946;
+    border-radius: 10px;
+  }
+  .form-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 100px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color:white;
+    background-color: #7CBDB9;
+    padding-left: 100px;
+    padding-right: 40px;
+    margin-left: -570px;
+    border-radius: 0px 10px 10px 0px;
+
+  }
+  
+  .form-card {
+    background-color: #f4f4f454;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+  }
+  
+  .question-options {
+    margin-top: 10px;
+    padding-left: 20px;
+    
+    
+  }
+  .question-options input[type="radio"] {
+    margin-right: 10px;
+    
+  }
+  .question-options input[type="checkbox"] {
+    margin-right: 10px;
+    
+    
+  }
+  
+  .free-input {
+    width: 100%;
+    resize: vertical;
+    width: 100%;
+  padding: 10px ;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  
+  font-size: 14px;
+  
+  }
+  
+  .submit-button {
+    background-color: #7CBDB9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .submit-button:hover {
+    /* Styles for the button when hovered over */
+    background-color: #8071c9;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdans-serif;
+  }
+  .user-img{
+      width: 50px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    margin-left: -25px;
+    
+  }
+  .sidebar{
+    position:absolute;
+    top:0;
+    left:0;
+    height:285vh;
+    width:60px;
+    background-color:#7CBDB9;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+    
+  }
+  .sidebar.active~ .main-content{
+    left:250px;
+    width: calc(100%-250px);
+    
+  }
+  .sidebar.active .user-img{
+    margin-left: 2px;
+  }
+  .sidebar.active{
+    width:250px;
+  }
+  .sidebar #btn{
+
+    position:absolute;
+    color: #fff;
+    top: .4rem;
+    left: 25px;
+    font-size:1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  .sidebar.active #btn{
+    left:90%;
+  }
+  .sidebar .top .logo{
+   color:#fff;
+    display:flex;
+     height:50px;
+    width:100%;
+   align-items: center;
+  pointer-events:none;
+   opacity:0;
+        }
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+.top .logo i{
+    font-size:2rem;
+    margin-right:5px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.user p{
+    color: white;
+    opacity:1;
+    margin-left: 1rem;
+   
+    
+}
+
+.bold{
+    font-weight: bold;
+}
+.sidebar p{
+    opacity:0;
+}
+.sidebar.active p{
+    opacity:1;
+}
+.sidebar ul li{
+    position:relative;
+    list-style-type: none;
+    height: 50px;
+    width:90%;
+    margin: 0.8rem auto;
+    line-height:50px;
+
+}
+.sidebar ul li a{
+
+    color:white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+.sidebar ul li a:hover{
+
+    background-color: white;
+    color:black;
+}
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    margin-left: -10px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+.sidebar span {
+    opacity: 0;
+}
+.sidebar.active span {
+    opacity: 1;
+}
+.sidebar ul li .tooltip{
+
+    position: absolute;
+    left: 115px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2) ;
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    z-index: 20;
+    opacity: 0;
+    
+
+}
+.sidebar ul li:hover .tooltip{
+    opacity:1;
+background-color: rgba(255, 255, 255, 0.6);}
+
+.sidebar.active ul li .tooltip{
+   display:none;}
+
+   .main-content{
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff, #DDEEEE);
+    
+    top:0;
+    left:60px;
+    transition: all 0.5s ease;
+    width: 1450px;
+    padding:1rem;
+   
+
+   }
+   .navbar {
+    background-color: #7CBDB9;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    margin-top:-15px;
+    margin-left:-40px;
+    height:50px;
+    
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 650px;
+   
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+    border: #DDEEEE;
+    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.363);}
+  
+  .search-bar button {
+    padding: 5px 10px;
+    background-color: #f1f3f562;
+    border: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  .header{
+    margin-top:-10px;
+  }
+  .main-content{
+    margin-left: -8px;
+    margin-top:  -10px;
+  }
+  /* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  .modal p {
+    margin-bottom: 10px;
+  }
+  
+  .modal button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color:#7CBDB9;
+  }
+  .form-card p{
+    color: red;
+  }
+  
+  

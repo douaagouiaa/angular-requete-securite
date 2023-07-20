@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="sidebar">
+        <div class="top">
+            <div class="logo">
+            <i class='bx bx-home-alt-2' ></i>
+            <span><p style="font-weight: bold;">Menu</p></span>
+            </div>
+            <i class="bx bx-menu" id="btn" (click)="toggleSidebar()"></i>
+
+
+            <div class="user">
+            <img src={{loggedUrl}} class="user-img">
+            <div><p class="bold">{{loggedInUsername}}</p>
+                <p>{{loggedInRole}}</p></div>    
+        </div>
+
+        
+            <div>
+            <ul>
+                <li >
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span>chantiers</span>
+                </a>
+                <span class="tooltip">chantiers</span>
+                </li>
+                <li >
+                <a href="#">
+                <i class='bx bxs-user' onclick="redirectToLogin()"></i>
+                    <span>Profile</span>
+                </a>
+                <span class="tooltip">profile</span>
+                </li>
+                <li >
+                <a href="#">
+                    <i class="bx bxs-log-out"></i>
+                    <span>deconnexion</span>
+                </a>
+                <span class="tooltip">deconnexion</span>
+                </li>
+            </ul>
+            </div> </div> </section>
+         
+            <header>
+               <nav class="navbar">
+                
+                    
+                  </nav>
+               </header>   
+        
+            <div class="main-content">
+                <div class="card" style="flex-basis: calc(20% - 20px);">
+                  <h2>Nombre de travailleurs respectants le protocole de sécurité par catégorie</h2><br><br>
+                  <div class="pie1" [chart]="donutChart"></div>
+                  
+                </div>
+                <div class="card" style="flex-basis: calc(20% - 20px);">
+                  <h2>Informations sur le chantier {{chantierId}}</h2>
+                  <p style="color: rebeccapurple; font-weight: bolder;">Nombre de travailleurs: </p>  <p>{{question9Value}}</p>
+                  <p style="color: rebeccapurple; font-weight: bolder;">Nombre de jours éstimés pour la fin du chantier: </p> <p>{{question10Value}}</p>
+                  <p style="color: rebeccapurple; font-weight: bolder;">  <i class='bx bxs-time'></i> Avancement: </p> <p>{{progress}} jours </p>
+                  <p style="color: rgb(102, 157, 151); font-weight: bolder;"> <i class='bx bxs-timer'  ></i> Jours jusqu'à la fin: </p> <p>{{left}} jours </p>
+                 
+                 
+                  
+                </div>
+                <div class="card" style="flex-basis: calc(20% - 20px); margin-left: 150px;">
+                  <h2>Statistique Génerale</h2>
+                  <p>
+                    <ngx-charts-bar-vertical [results]="barData"></ngx-charts-bar-vertical>
+                  </p>
+                </div>
+                <div class="card" style="flex-basis: calc(29% - 20px);" >
+                  <h2>Légende pour le statistique</h2><br><br>
+                  <h3 style="font-weight: bolder; color:rgb(168, 56, 93)"><i class='bx bxs-rectangle'></i> </h3><h3>Taux de respect du protocole</h3>
+                 
+                  <h3 style="font-weight: bolder; color:rgb(122, 163, 229)"><i class='bx bxs-rectangle'></i> </h3><h3>Taux de précaution</h3>
+                  <h3 style="font-weight: bolder; color:rgb(162, 126, 168)"><i class='bx bxs-rectangle'></i> </h3><h3>Taux d'accidents par moins</h3>
+                  <h3 style="font-weight: bolder; color:rgb(170, 227, 245)"><i class='bx bxs-rectangle'></i> </h3><h3>Materiaux bon sùres durant le moins dernier</h3>
+                </div>
+                
+              </div>
+             
+
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS JS</title>
+
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body >
+    
+            <section class="sidebar">
+                <div class="top">
+                    <div class="logo">
+                    <i class='bx bx-home-alt-2' ></i>
+                    <span><p style="font-weight: bold;">Menu</p></span>
+                    </div>
+                    <i class="bx bx-menu" id="btn" (click)="toggleSidebar()"></i>
+
+
+                    <div class="user">
+                    <img src={{loggedUrl}} class="user-img">
+                    <div><p class="bold">{{loggedInUsername}}</p>
+                        <p>{{loggedInRole}}</p></div>    
+                </div>
+                
+                    <div>
+                    <ul>
+                        <li >
+                        <a href="#">
+                            <i class="bx bxs-grid-alt"></i>
+                            <span>chantiers</span>
+                        </a>
+                        <span class="tooltip">chantiers</span>
+                        </li>
+                        <li >
+                        <a href="#">
+                        <i class='bx bxs-user'></i>
+                            <span>Profile</span>
+                        </a>
+                        <span class="tooltip">profile</span>
+                        </li>
+                        <li >
+                        <a href="#">
+                            <i class="bx bxs-log-out"></i>
+                            <span>deconnexion</span>
+                        </a>
+                        <span class="tooltip">deconnexion</span>
+                        </li>
+                    </ul>
+                    </div> </div> </section>
+                 
+                    <header>
+                        <nav class="navbar">
+                            
+                            <div class="search-bar">
+                                <input type="text" placeholder="eg: Chantier ABC12"  [(ngModel)]="searchQuery" (input)="filterChantiers()">
+                                <button>recherche</button>
+                              </div>
+                            <div class="icons">
+                              <span class="notification-icon"></span>
+                              <span class="logout-icon"></span>
+                            </div>
+                          </nav>
+                       </header>  
+                <div class="main-content">
+                    
+                      
+                           <div class="mainTitle">Liste des chantiers</div>
+                           <div style="background-color: white; width: auto; height: 20px;"></div>
+                           <div *ngFor="let chantier of chantiers" class="chantiers">
+                            
+                            
+   
+      <div class="product-section">
+        <div class="title-section">
+       
+        <div class="profile-icon">
+          <i class='bx bx-hard-hat'></i>
+               
+            </div> <h3>{{chantier.id}}</h3>
+            </div>
+        <p style="margin-left: 70px ; margin-top: -20px; color: grey; ">{{chantier.Status}}</p>
+        <p style="margin-left: 70px; margin-top: -5px;">Description:<br> {{chantier.Description}}.</p>
+        <div class="product-buttons">
+          <button  *ngIf="loggedInRole === 'controlleur'" (click)="redirectToRoute(chantier.id)" class="button1">Accéder à la formulaire</button> <!--to make this button appear to only controlleurs-->
+          <button  (click)="redirectToRouteDashboard(chantier.id)" class="button2" >Accéder au dashboard</button>
+        </div>
+      </div>
+     
+
+
+
+
+
+                           </div>
+                     </div>
+           
+                    
+  </body>
+  
+  
+  
+</html>
